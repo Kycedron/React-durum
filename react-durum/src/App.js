@@ -11,10 +11,10 @@ function App() {
 				<div class="container">
 					<a href="/">
 						<div class="header__logo">
-							<img width="38" src="/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg" alt="Pizza logo" />
+							<img width="38" src="/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg" alt="Durum logo" />
 							<div>
 								<h1>React durum</h1>
-								<p>самая вкусный durum во вселенной</p>
+								<p>самый вкусный durum в восточной анталии</p>
 							</div>
 						</div>
 					</a>
@@ -23,7 +23,7 @@ function App() {
 							<circle cx="14" cy="14" fill="none" id="XMLID_42_" r="9" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></circle>
 							<line fill="none" id="XMLID_44_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="27" x2="20.366" y1="27" y2="20.366"></line>
 						</svg>
-						<input class="Search_input__klILD" placeholder="Поиск пиццы..." value="" />
+						<input class="Search_input__klILD" placeholder="Поиск duruma..." value="" />
 					</div>
 					<div class="header__cart">
 						<a class="button button--cart" href="/cart">
