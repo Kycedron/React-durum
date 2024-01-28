@@ -1,13 +1,10 @@
 
 import './scss/app.scss';
 
-function App() {
-  return (
-<body>
-	<noscript>You need to enable JavaScript to run this app.</noscript>
-	<div id="root">
-		<div class="wrapper">
-			<div class="header">
+
+function Header(){
+	return(
+		<div class="header">
 				<div class="container">
 					<a href="/">
 						<div class="header__logo">
@@ -57,6 +54,16 @@ function App() {
 					</div>
 				</div>
 			</div>
+	)
+}
+
+function App() {
+  return (
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div id="root">
+		<div class="wrapper">
+			<Header/>
 			<div class="content">
 				<div class="container">
 					<div class="content__top">
