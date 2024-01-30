@@ -5,6 +5,10 @@ import Categories from './Components/Categories';
 import Sort from './Components/Sort';		
 import DurumBlock from './Components/DurumBlock';			
 import Footer from './Components/Footer/Footer';
+import Swiper from './Components/SwiperComp';
+
+
+
 
 
 function App() {
@@ -12,16 +16,17 @@ function App() {
 <body>
 	<noscript>You need to enable JavaScript to run this app.</noscript>
 	<div id="root">
-		<div class="wrapper">
+		<div className="wrapper">
+		<Swiper/>
 			<Header/>
-			<div class="content">
-				<div class="container">
-					<div class="content__top">
+			<div className="content">
+				<div className="container">
+					<div className="content__top">
 					<Categories/>
 					<Sort/>
 					</div>
-					<h2 class="content__title">Все durumы</h2>
-					<div class="content_items">
+					<h2 className="content__title">Все durumы</h2>
+					<div className="content_items">
 						<DurumBlock/>
 						<DurumBlock/>
 						<DurumBlock/>
