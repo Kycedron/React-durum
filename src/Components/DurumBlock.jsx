@@ -7,7 +7,7 @@ function DurumBlock() {
     alt="Pizza"
   />
   <h4 class="pizza-block__title">Гавайский-дурум</h4>
-  <h3 class="pizza-block__title">Дурум с ананасом это израильская тема</h3>
+  <h3 class="pizza-block__title">Дурум с ананасом</h3>
   <div class="pizza-block__selector">
     <ul>
       <li class="active">тонкое</li>

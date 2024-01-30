@@ -310,3 +310,20 @@ body {
     }
   }
 }
+
+.swiper {
+  width: 200px;
+  height: 300px;
+  width: 50%; 
+
+  .img{
+   display: block;
+   width: 100%;
+
+  } 
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

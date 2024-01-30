@@ -9,16 +9,14 @@ import Swiper from './Components/SwiperComp';
 
 
 
-
-
 function App() {
   return (
 <body>
 	<noscript>You need to enable JavaScript to run this app.</noscript>
 	<div id="root">
 		<div className="wrapper">
-		<Swiper/>
 			<Header/>
+			<Swiper/>
 			<div className="content">
 				<div className="container">
 					<div className="content__top">
