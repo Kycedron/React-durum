@@ -25,11 +25,10 @@ function App() {
 					</div>
 					<h2 className="content__title">Все durumы</h2>
 					<div className="content_items">
-						<DurumBlock/>
-						<DurumBlock/>
-						<DurumBlock/>
-						<DurumBlock/>
-						<DurumBlock/>
+						<DurumBlock title="Meксиканская" price={385}/>
+						<DurumBlock title="Гавайская" price={37500}/>
+						<DurumBlock title="Испанская" price={345}/>
+						<DurumBlock title="Турецкая" price={325}/>
 					</div>
 				</div>
 			</div>

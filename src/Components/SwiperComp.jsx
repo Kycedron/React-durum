@@ -14,7 +14,10 @@ const SwiperComponent = () => {
   const swiperParams = {
     spaceBetween: 50,
     slidesPerView: 1,
-    navigation: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     pagination: { clickable: true },
     scrollbar: { draggable: true },
   };

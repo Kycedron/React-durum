@@ -1,4 +1,5 @@
-function DurumBlock() {
+
+function DurumBlock({title,price}) {
   return (
     <div class="pizza-block">
   <img
@@ -6,8 +7,8 @@ function DurumBlock() {
     src="https://i.pinimg.com/564x/54/42/19/544219669368f6b4c0f5bf78e8aa5ac1.jpg"
     alt="Pizza"
   />
-  <h4 class="pizza-block__title">Гавайский-дурум</h4>
-  <h3 class="pizza-block__title">Дурум с ананасом</h3>
+  <h4 class="pizza-block__title">{title}</h4>
+ 
   <div class="pizza-block__selector">
     <ul>
       <li class="active">тонкое</li>
@@ -20,7 +21,7 @@ function DurumBlock() {
     </ul>
   </div>
   <div class="pizza-block__bottom">
-    <div class="pizza-block__price">от 395 ₽</div>
+    <div class="pizza-block__price">от {price} ₽</div>
     <div class="button button--outline button--add">
       <svg
         width="12"
