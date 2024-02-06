@@ -1,15 +1,15 @@
 
 function DurumBlock({title,price}) {
   return (
-    <div class="pizza-block">
+    <div class="durum-block">
   <img
-    class="pizza-block__image"
+    class="durum-block__image"
     src="https://i.pinimg.com/564x/54/42/19/544219669368f6b4c0f5bf78e8aa5ac1.jpg"
-    alt="Pizza"
+    alt="durum"
   />
-  <h4 class="pizza-block__title">{title}</h4>
+  <h4 class="durum-block__title">{title}</h4>
  
-  <div class="pizza-block__selector">
+  <div class="durum-block__selector">
     <ul>
       <li class="active">тонкое</li>
       <li>традиционное</li>
@@ -20,8 +20,8 @@ function DurumBlock({title,price}) {
       <li>40 см.</li>
     </ul>
   </div>
-  <div class="pizza-block__bottom">
-    <div class="pizza-block__price">от {price} ₽</div>
+  <div class="durum-block__bottom">
+    <div class="durum-block__price">от {price} ₽</div>
     <div class="button button--outline button--add">
       <svg
         width="12"
