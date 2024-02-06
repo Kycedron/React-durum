@@ -1,0 +1,78 @@
+
+#footer {
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 80vw;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 20px auto;
+  }
+
+  .footer-section {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+
+    strong {
+      color: #000;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: 'Montserrat';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .copyright{
+      height: 40px;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      background-color: #000;
+      color: #fff;
+      position: absolute;
+      font-size: 15px;
+      p{
+        margin: 0;
+        a{
+          color: #fff;
+          padding: 0 5px;
+        }
+      }
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .about-company,
+    .wholesale,
+    .social-links,
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-company a,
+    .wholesale a,
+    .social-links a,
+    .contact-info a {
+      margin-bottom: 10px;
+    }
+
+    .address {
+      margin-top: 10px;
+    }
+  }
+}
