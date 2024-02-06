@@ -35,7 +35,7 @@ function DurumBlock({title,price}) {
           fill="white"
         />
       </svg>
-      <span>Добавить</span>
+      <span>Дообавить</span>
       <i>2</i>
     </div>
   </div>
