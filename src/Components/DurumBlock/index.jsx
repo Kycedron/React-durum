@@ -6,7 +6,8 @@ function DurumBlock({ title, price, image, sizes, types }) {
   const typeNames = ['тонкое', 'традиционное'];
 
   return (
-    <div className="durum-block">
+ <div className='durum-block-wrapper'>
+     <div className="durum-block">
       <img className="durum-block__image" src={image} alt="durum" />
       <h4 className="durum-block__title">{title}</h4>
 
@@ -51,6 +52,7 @@ function DurumBlock({ title, price, image, sizes, types }) {
         </button>
       </div>
     </div>
+ </div>
   );
 }
 export default DurumBlock;

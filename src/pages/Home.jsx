@@ -17,22 +17,23 @@ export const Home = () => {
           setItems(arr);
           setIsLoading(false);
         });
+        window.scrollTo(0,0);
     }, []);
   
   return (
-   <>
+   <div className="container">
    <Swiper />
        <div className="content__top">
                 <Categories />
                 <Sort />
               </div>
               <h2 className="content__title">Все durumы</h2>
-              <div className="content_items">
+              <div className="content__items">
               {isLoading 
 				? [... new Array(6)].map((_, index) =><Skeleton/>)
 				 : items.map((obj) => <DurumBlock key ={obj.id}{...obj} />)}
               </div>
-   </>
+   </div>
   )
 }
 export default Home;
