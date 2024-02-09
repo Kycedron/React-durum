@@ -23,13 +23,15 @@ const SwiperComponent = () => {
   };
 
   return (
-    <Swiper {...swiperParams}>
+    <Swiper
+    style={{ width: '100%', marginTop: '-20px' }} // Применяем стиль width: 100% и уменьшаем marginTop
+    {...swiperParams}>
       <SwiperSlide>
         <div className="slide-content">
           <img
             src="https://i.pinimg.com/564x/4b/a3/22/4ba32282ee1ccff5de26aad11ed66eff.jpg"
             alt="Slide 1"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '10%' }}
           />
         </div>
       </SwiperSlide>
