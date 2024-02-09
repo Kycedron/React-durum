@@ -1,13 +1,11 @@
 import './scss/app.scss';
-
+import React from 'react';
 import Header from './Components/Header';
-import Categories from './Components/Categories';
-import Sort from './Components/Sort';
-import DurumBlock from './Components/DurumBlock';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
 import Footer from './Components/Footer/Footer';
-import Swiper from './Components/SwiperComp';
-
-import durum from './assets/durum.json';
+import NotFound from './pages/NotFound';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -16,19 +14,13 @@ function App() {
       <div id="root">
         <div className="wrapper">
           <Header />
-          <Swiper />
           <div className="content">
             <div className="container">
-              <div className="content__top">
-                {/* <Categories/> */}
-                <Sort />
-              </div>
-              <h2 className="content__title">Все durumы</h2>
-              <div className="content_items">
-                {durum.map((obj) => (
-                  <DurumBlock key={obj.id} {...obj} />
-                ))}
-              </div>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
             </div>
           </div>
         </div>
