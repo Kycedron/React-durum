@@ -1,8 +1,6 @@
 import React from 'react'
 
-function Sort({value, onChangeSort}) {
-const[open,setOpen]=React.useState(false);
-const list =[
+export const list =[
   {name: 'популярности(Desc)', sortProperty: 'rating'},
   {name: 'популярности(ASC)', sortProperty: '-rating'},
   {name: 'цене(Desc)', sortProperty: 'price'},
@@ -11,6 +9,11 @@ const list =[
   {name: 'алфавиту(ASC)', sortProperty: '-title'},
 
 ];
+
+function Sort({value, onChangeSort}) {
+
+const[open,setOpen]=React.useState(false);
+
 
 
 const OnclickListItem = (i) => {
@@ -40,7 +43,7 @@ setOpen(false);
             {list.map((obj, i) => (
               <li
               key={i}
-              onClick={() => OnclickListItem(obj.sortProperty)}
+              onClick={() => OnclickListItem(obj)}
               className={value.sortProperty === obj.sortProperty ? 'active' : ''}>
               {obj.name}
             </li>  
