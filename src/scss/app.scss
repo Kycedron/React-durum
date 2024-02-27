@@ -160,12 +160,9 @@ grid-row-gap: 20px;
     }
   }
 
-  .content__items{ ////сюда
-    display: block;   ////сюда
-    grid-template-columns:  0!important; ////сюда
-    grid-template-rows:  0!important; ////сюда
-    grid-column-gap:  0!important; ////сюда
-    grid-row-gap: 0!important; ////сюда
+  .content__items{ 
+    display: block;   
+
   }
 
   &__item {
