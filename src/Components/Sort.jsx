@@ -5,7 +5,7 @@ export const list =[
   {name: 'популярности(ASC)', sortProperty: '-rating'},
   {name: 'цене(Desc)', sortProperty: 'price'},
   {name: 'цене(ASC)', sortProperty: '-price'},
-  {name: 'алфавиту(Desc)', sortProperty: 'title'},
+  {name: 'алфaавиту(Desc)', sortProperty: 'title'},
   {name: 'алфавиту(ASC)', sortProperty: '-title'},
 
 ];
