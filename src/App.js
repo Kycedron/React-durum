@@ -7,6 +7,8 @@ import Footer from './Components/Footer/Footer';
 import NotFound from './pages/NotFound';
 import { Routes, Route } from 'react-router-dom';
 
+const AppContext = React.createContext(defaultValue);
+
 function App() {
   const [searchValue, setSearchValue] = React.useState('');
 
