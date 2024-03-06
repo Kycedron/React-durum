@@ -30,7 +30,8 @@ export const Home = ({ searchValue }) => {
     const search = searchValue ? `search=${searchValue}` : '';
     fetch(
       `https://65c4eaa7dae2304e92e3a51e.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortby}&order=${order}&${search}`,
-    )
+    ) 
+    
       .then((res) => res.json())
       .then((arr) => {
         console.log(arr);
@@ -43,7 +44,7 @@ export const Home = ({ searchValue }) => {
 
   console.log(categoryId, sortType);
 
-  const durums = items.map((obj) => <DurumBlock key={obj.id} {...obj} />);
+  const durums = Array.isArray(items) ? items.map((obj) => <DurumBlock key={obj.id} {...obj} />) : null;
 
   const skeletons = [...new Array(6)].map((index) => <Skeleton key={index} />);
 
