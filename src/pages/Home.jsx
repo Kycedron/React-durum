@@ -30,41 +30,30 @@ const Home = () => {
   };
 
   React.useEffect(() => {
-    setIsLoading(true);
-
-    const sortby = sortType.replace('-', '');
-    const order = sortType.includes('-') ? 'asc' : 'desc';
-    const category = categoryId > 0 ? `category=${categoryId}` : '';
-    const search = searchValue ? `search=${searchValue}` : '';
-
-    axios
-      .get(
-        `https://65c4eaa7dae2304e92e3a51e.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortby}&order=${order}&${search}`,
-      )
-      .then((res) => {
+    const fetchData = async () => {
+      setIsLoading(true);
+  
+      const sortby = sortType.replace('-', '');
+      const order = sortType.includes('-') ? 'asc' : 'desc';
+      const category = categoryId > 0 ? `category=${categoryId}` : '';
+      const search = searchValue ? `search=${searchValue}` : '';
+  
+      try {
+        const res = await axios.get(`https://65c4eaa7dae2304e92e3a51e.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortby}&order=${order}&${search}`);
         setItems(res.data);
         setIsLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error('Ошибка при получении данных:', error);
-    
-      });
+        alert('ошибка потому что дурумсов нет');
+      }
+    };
+  
+    fetchData();
+  
     window.scrollTo(0, 0);
   }, [categoryId, sortType, searchValue, currentPage]);
+  
 
-  // React.useEffect(() => {
-  //   if (window.location.search){
-  //     FetchDurum(); 
-  //   }
-  // }, []) /
-  React.useEffect(() => {
-    const queryString = qs.stringify({
-      sortProperty: sortType,
-      categoryId,
-      currentPage,
-    });
-
-  }, [categoryId, sortType, currentPage]);
 
   const durums = Array.isArray(items)
     ? items.map((obj) => <DurumBlock key={obj.Id} {...obj} />)

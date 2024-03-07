@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addItem, minusItem, removeItem} from '../redux/slices/cartSlice';
+import { addItem, minusItem, removeItem, updateTotalPrice} from '../redux/slices/cartSlice';
 
 const CartItem = ({ Id, title, type, size, price, count, imageUrl }) => {
   const dispatch = useDispatch();
@@ -22,6 +22,7 @@ const CartItem = ({ Id, title, type, size, price, count, imageUrl }) => {
   const onClickRemove = () => {
     if (window.confirm('Ты действительно хочешь удалить товар?')) {
       dispatch(removeItem(Id));
+      dispatch(updateTotalPrice((Id)));
     }
   };
 
