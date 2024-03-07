@@ -52,10 +52,10 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, [categoryId, sortType, searchValue, currentPage]);
 
-  React.useEffect(() => {
-    if (window.location.search){
-      FetchDurum(); 
-    }
+  // React.useEffect(() => {
+  //   if (window.location.search){
+  //     FetchDurum(); 
+  //   }
   }, []) /
   React.useEffect(() => {
     const queryString = qs.stringify({
