@@ -1,71 +1,78 @@
-@import '../variables';
-
 .durum-block {
-  width: 280px;
-  text-align: center;
-  margin-bottom: 65px;
+  display: flex;
+  flex-direction: column; /* Добавляем стили для выравнивания по центру */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /*
+}
 
-  &:not(:nth-of-type(4n)) {
-    margin-right: 35px;
-  }
- &-wrapper{
+.durum-block:not(:nth-of-type(4n)) {
+  margin-right: 0; /* Убираем отступ у последнего блока в строке */
+}
+
+.durum-block__wrapper {
   display: flex;
   justify-content: center;
- }
-  &__image {
-    width: 260px;
-  }
+  lign-items: stretch; /* Выравнивание элементов по высоте */
+  flex-wrap: wrap; 
+}
 
-  &__title {
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 1%;
-    margin-bottom: 20px;
-  }
+.durum-block__image {
+  width: 100%; /* Занимать всю доступную ширину */
+  max-width: 140px;
+  max-height: 140px;
+  white-space: nowrap; 
+}
 
-  &__selector {
-    display: flex;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-    flex-direction: column;
-    padding: 6px;
+.durum-block__title {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1%;
+  margin-bottom: 20px;
+}
 
-    ul {
-      display: flex;
-      flex: 1;
+.durum-block__selector {
+  display: flex;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 6px;
+}
 
-      &:first-of-type {
-        margin-bottom: 6px;
-      }
+.durum-block__selector ul {
+  display: flex;
+  flex: 1;
+}
 
-      li {
-        padding: 8px;
-        flex: 1;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 14px;
-        @include noselect();
-        &.active {
-          background: #ffffff;
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-          border-radius: 5px;
-          cursor: auto;
-        }
-      }
-    }
-  }
+.durum-block__selector ul:first-of-type {
+  margin-bottom: 6px;
+}
 
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
+.durum-block__selector li {
+  padding: 8px;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
 
-  &__price {
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 27px;
-    letter-spacing: 0.015em;
-  }
+.durum-block__selector li.active {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  cursor: auto;
+}
+
+.durum-block__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.durum-block__price {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 0.015em;
 }

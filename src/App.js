@@ -7,25 +7,25 @@ import Footer from './Components/Footer/Footer';
 import NotFound from './pages/NotFound';
 import { Routes, Route } from 'react-router-dom';
 
-const AppContext = React.createContext(defaultValue);
+export const SearchContext = React.createContext('');
 
 function App() {
   const [searchValue, setSearchValue] = React.useState('');
 
-
   return (
     <body>
-      <noscript>You need to enable JavaScript to run this app.</noscript>
       <div id="root">
         <div className="wrapper">
-          <Header searchValue={searchValue} setSearchValue={setSearchValue} />
-          <div className="content">
-            <Routes>
-              <Route path="/" element={<Home searchValue={searchValue} />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </div>
+          <SearchContext.Provider value={{ searchValue, setSearchValue }}>
+            <Header  />
+            <div className="content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </div>
+          </SearchContext.Provider>
         </div>
       </div>
       <Footer />
