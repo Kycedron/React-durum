@@ -56,7 +56,7 @@ const Home = () => {
   //   if (window.location.search){
   //     FetchDurum(); 
   //   }
-  }, []) /
+  // }, []) /
   React.useEffect(() => {
     const queryString = qs.stringify({
       sortProperty: sortType,
