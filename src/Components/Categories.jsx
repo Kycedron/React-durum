@@ -1,7 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Categories({ value, onChangeCategory }) {
-  const categories = ['Все', 'мясныe', 'Вегетарианские', 'Гриль', 'Острые', 'Закрытые'];
+  const [t] = useTranslation('global');
+  const categories = [ 
+  t('Categories.all'),
+  t('Categories.meat'),
+  t('Categories.vegetarian'),
+  t('Categories.grill'),
+  t('Categories.spicy'),
+  t('Categories.closed')
+];
 
   return (
     <div className="categories">

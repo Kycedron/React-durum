@@ -16,7 +16,7 @@ const Home = () => {
 
   const dispatch = useDispatch();
   const { categoryId, currentPage } = useSelector((state) => state.filter);
-  const sortType = useSelector((state) => state.filter.sort.sortProperty); // Вероятно, это было имелось в виду
+  const sortType = useSelector((state) => state.filter.sort.sortProperty);
 
   const { searchValue } = React.useContext(SearchContext);
   const [items, setItems] = React.useState([]);

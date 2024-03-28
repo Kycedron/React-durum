@@ -1,29 +1,30 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 import './Footer.scss';
 
 function Footer() {
+  const { t } = useTranslation('global');
   return (
     
     <footer id="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <strong>Компания</strong>
+          <strong>{t('footer.sections.about')}</strong>
           <div className="about-company">
-            <li>О компании</li>
-            <li>Акции</li>
+            <li>{t('footer.links.aboutCompany')}</li>
+            <li>{t('footer.links.specialOffers')}</li>
           </div>
         </div>
         <div className="footer-section">
-          <strong>Информация</strong>
+          <strong>{t('footer.sections.information')}</strong>
           <div className="wholesale">
-            <li>Оптовые продажи</li>
-            <li>Способы оплаты</li>
-            <li>Условия доставки</li>
+            <li>{t('footer.links.wholesale')}</li>
+            <li>{t('footer.links.paymentMethods')}</li>
+            <li>{t('footer.links.deliveryTerms')}</li>
           </div>
         </div>
         <div className="footer-section">
-          <strong>Способы связи</strong>
+          <strong>{t('footer.sections.contacts')}</strong>
           <div className="social-links">
             <a
               href=""
@@ -48,7 +49,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-section">
-          <strong>Наши контакты:</strong>
+          <strong>{t('footer.sections.contacts')}</strong>
           <div className="contact-info">
             <a rel="nofollow" href="tel:+79964209691">
               +7 (902) 632-07-97
@@ -65,5 +66,5 @@ function Footer() {
     </footer>
   );
 };
-// document.getElementById("currentYear").innerText = new Date().getFullYear();
+
 export default Footer;

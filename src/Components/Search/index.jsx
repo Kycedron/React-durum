@@ -3,12 +3,15 @@ import debounce from 'lodash.debounce';
 
 import styles from './search.module.scss';
 import { SearchContext } from '../../App';
+import { useTranslation } from 'react-i18next';
 
 export const Search = () => {
   const [value, setValue] = React.useState('');
 
   const { setSearchValue } = React.useContext(SearchContext);
   const inputRef = React.useRef();
+
+  const { t } = useTranslation('global');
 
   const onClickClear = () => {
     setSearchValue('');
@@ -67,7 +70,7 @@ export const Search = () => {
         value={value}
         onChange={onChangeInput}
         className={styles.input}
-        placeholder="Поиск дурума..."
+        placeholder={t('Search.placeholder')}
       />
       {value && (
         <svg

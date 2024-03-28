@@ -1,0 +1,79 @@
+{
+  "Header": {
+    "header_title": "React durum",
+    "header_description": "Berst durum in all eastern Antalya"
+  },
+  "Search": {
+    "placeholder": "search durum..."
+  },
+  "NotFoundBlock": {
+    "title": "quite empty here :((",
+    "description": "with all due regret we dont have that page here"
+  }
+  ,
+  "DurumBlock": {
+    "type1": "thin",
+    "type2": "traditional",
+    "addButton": "add"
+  },
+     "sort": {
+      "title": "Sorting",
+      "popularity_desc": "popularity(Desc)",
+      "popularity_asc": "popularity(ASC)",
+      "price_desc": "price(Desc)",
+      "price_asc": "price(ASC)",
+      "alphabet_desc": "alphabet(Desc)",
+      "alphabet_asc": "alphabet(ASC)"
+    },
+    "Categories": {
+      "all": "all",
+      "meat": "meat",
+      "vegetarian": "vegan",
+      "grill": "grill",
+      "spicy": "spicy",
+      "closed": "closed"
+    },
+   "cartItem": {
+      "confirmDelete": "do you want to delete this",
+      "itemAlt": "durum",
+      "sizeUnit": "см",
+      "removeItem": "delete item"
+    },
+    "cartEmpty": {
+      "title": "bascket empty",
+      "description": {
+        "first": "probably you havent ordered durum",
+        "second": "to order durum go to main page"
+      },
+      "imageAlt": "Empty cart",
+      "backButton": "turn back"
+    },
+    "cart": {
+      "title": "Bascket",
+      "confirmClear": "do you want to clear this",
+      "clearButton": "clear bascket",
+      "totalItems": "all durums",
+      "totalPrice": "final cost ",
+      "backButton": "to main page",
+      "payButton": "pay now"
+    },
+    "footer": {
+      "sections": {
+        "about": "About",
+        "information": "Information",
+        "contacts": "Contact Us"
+      },
+      "links": {
+        "aboutCompany": "About Company",
+        "specialOffers": "Special Offers",
+        "wholesale": "Wholesale",
+        "paymentMethods": "Payment Methods",
+        "deliveryTerms": "Delivery Terms"
+      },
+      "contact": {
+        "workTime": "Mon-Sun 10:00 AM - 7:30 PM No weekends"
+      }
+    }
+  
+}
+

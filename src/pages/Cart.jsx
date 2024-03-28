@@ -4,20 +4,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import CartItem from '../Components/CartItem';
 import CartEmpty from '../Components/CartEmpty';
 import { clearItems } from '../redux/slices/cartSlice';
-
+import { useTranslation } from 'react-i18next';
 const Cart = () => {
   const dispatch = useDispatch();
+  const { t, i18n } = useTranslation('global');
   const { totalPrice, items } = useSelector((state) => state.cart);
   const totalCount = items.reduce((acc, item) => acc + item.count, 0);
 
   const onClickClear = () => {
-    if (window.confirm('Ты действительно хочешь очистить корзину?')) {
+    if (window.confirm(t('cart.confirmDelete'))) {
       dispatch(clearItems());
     }
   };
 
-  if(!totalPrice) {
-    return <CartEmpty/>
+  if (!totalPrice) {
+    return <CartEmpty />;
   }
   return (
     <div className="container container--cart">
@@ -53,7 +54,7 @@ const Cart = () => {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            Корзина
+            {t('cart.title')}
           </h2>
           <div onClick={onClickClear} className="cart__clear">
             <svg
@@ -93,7 +94,7 @@ const Cart = () => {
               ></path>
             </svg>
 
-            <span>Очистить корзину</span>
+            <span>{t('cart.clearButton')}</span>
           </div>
         </div>
         <div className="content__items">
@@ -105,11 +106,11 @@ const Cart = () => {
           <div className="cart__bottom-details">
             <span>
               {' '}
-              Всего дурумов: <b>{totalCount} шт.</b>{' '}
+              {t('cart.totalItems')}: <b>{totalCount} шт.</b>{' '}
             </span>
             <span>
               {' '}
-              Сумма заказа: <b>{totalPrice} ₽</b>{' '}
+              {t('cart.totalPrice')}: <b>{totalPrice} ₽</b>{' '}
             </span>
           </div>
           <div className="cart__bottom-buttons">
@@ -130,10 +131,10 @@ const Cart = () => {
                 ></path>
               </svg>
 
-              <span>Вернуться назад</span>
+              <span>{t('cart.backButton')}</span>
             </Link>
             <div className="button pay-btn">
-              <span>Оплатить сейчас</span>
+              <span>{t('cart.payButton')}</span>
             </div>
           </div>
         </div>

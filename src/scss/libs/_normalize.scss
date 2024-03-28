@@ -53,3 +53,21 @@ a {
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
 }
+.dark-mode {
+  background-color: #000000; /* Черный фон */
+  color: #ffffff; /* Белый текст */
+
+  /* Дополнительные стили для текста и других элементов в темной теме, если необходимо */
+}
+
+.dark-mode a,
+.dark-mode span,
+.dark-mode p,
+.dark-mode b,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5 {
+  color: #ffffff; /* Белый текст */
+}

@@ -29,3 +29,16 @@
     }
   }
 }
+.dark-mode .categories li {
+  background-color: #2f2f2f; /* Цвет фона для элементов в темной теме */
+  color: #ffffff; /* Цвет текста в темной теме */
+}
+
+.dark-mode .categories li:hover {
+  background-color: darken(#2f2f2f, 10%); /* Немного затемняем при наведении */
+}
+
+.dark-mode .categories li.active {
+  background-color: #ffffff; /* Цвет активного элемента в темной теме */
+  color: #282828; /* Цвет текста активного элемента в темной теме */
+}

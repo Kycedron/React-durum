@@ -76,3 +76,24 @@
   line-height: 27px;
   letter-spacing: 0.015em;
 }
+.dark-mode .durum-block {
+  color: #ffffff; /* Белый текст */
+}
+
+.dark-mode .durum-block__selector {
+  background-color: #1f1f1f; /* Цвет фона для селектора */
+}
+
+.dark-mode .durum-block__selector li {
+  color: #ffffff; /* Белый текст */
+}
+
+.dark-mode .durum-block__selector li.active {
+  background: #ffffff; /* Цвет активного элемента */
+  color: #1f1f1f; /* Цвет текста для активного элемента */
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.04); /* Тень */
+}
+
+.dark-mode .durum-block__price {
+  color: #ffffff; /* Цвет цены */
+}

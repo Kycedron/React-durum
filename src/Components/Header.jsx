@@ -1,11 +1,12 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Search } from './Search';
 function Header() {
-  const {items,totalPrice} = useSelector((state) => state.cart )
-  const totalCount =items.reduce((sum,item) => sum + item.count,0)
+  const { items, totalPrice } = useSelector((state) => state.cart);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const [t] = useTranslation('global');
   return (
     <div className="header">
       <div className="container">
@@ -17,13 +18,13 @@ function Header() {
               alt="Durum logo"
             />
             <div>
-              <h1>React durum</h1>
-              <p>самый вкусный durum в восточной анталии</p>
+              <h1>{t('Header.header_title')}</h1>
+              <p>{t('Header.header_description')}</p>
             </div>
           </div>
         </Link>
-       <Search />
-           
+        <Search />
+
         <div className="header__cart">
           <Link to="/cart" className="button button--cart">
             <span>{totalPrice}</span>

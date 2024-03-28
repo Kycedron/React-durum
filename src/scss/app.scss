@@ -111,6 +111,7 @@ body {
       width: 30px;
       height: 30px;
       margin-right: 10px;
+      color: #8d8d8d;
       path {
         stroke: $black;
         stroke-width: 1.9;
@@ -373,10 +374,117 @@ body {
 
 .dark-mode {
   background-color: #1f1f1f;
-  color: #ffffff;
+  color: #ffffff; /* Белый текст */
+
+  /* Дополнительные стили для текста в темной теме, если необходимо */
 }
 
 .light-mode {
   background-color: #ffffff;
   color: #333333;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+.theme-switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.theme-switch-input {
+  display: none;
+}
+
+/* Add new styles for the switch label */
+.theme-switch-label {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Add new styles for the switch slider */
+.theme-switch-slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+/* Add new styles for the switch handle */
+.theme-switch-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+/* Add new styles for the switch input checked state */
+.theme-switch-input:checked + .theme-switch-slider {
+  background-color: #007bff; /* Change to your desired color */
+}
+
+/* Add new styles for the switch input checked state */
+.theme-switch-input:checked + .theme-switch-slider .theme-switch-handle {
+  left: calc(100% - 18px);
+}
+
+/* Adjust the color of the handle based on theme */
+.light-mode .theme-switch-handle {
+  background-color: #333; /* Dark handle color for light mode */
+}
+
+.dark-mode .theme-switch-handle {
+  background-color: #eee; /* Light handle color for dark mode */
+}
+.light-mode .sort {
+  background-color: #fff; /* белый фон в светлом режиме */
+  color: #000; /* черный текст в светлом режиме */
+}
+.dark-mode .sort {
+  &__popup {
+    background: #1f1f1f; /* Цвет фона темного режима */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Тень темного режима */
+
+    ul {
+      li {
+        &:hover {
+          background: rgba(255, 255, 255, 0.05); /* Цвет фона при наведении в темном режиме */
+        }
+      }
+    }
+  }
+}
+.language-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-buttons button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.language-buttons button:hover {
+  background-color: #45a049;
+}
+
+.language-buttons button:focus {
+  outline: none;
 }

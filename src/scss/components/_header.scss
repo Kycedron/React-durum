@@ -48,3 +48,14 @@
     }
   }
 }
+.dark-mode .header {
+
+  
+  .header__logo h1 {
+    color: #ffffff; /* Цвет текста для заголовка h1 в тёмной теме */
+  }
+
+  .header__logo p {
+    color: #b6b6b6; /* Цвет текста для абзаца в тёмной теме */
+  }
+}

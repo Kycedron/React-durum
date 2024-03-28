@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem } from '../../redux/slices/cartSlice';
+import { useTranslation } from 'react-i18next'; // Импортируем хук useTranslation
 
 function DurumBlock({ Id, title, price, imageUrl, sizes, types }) {
   const dispatch = useDispatch();
   const cartItem = useSelector((state) => state.cart.items.find((obj) => obj.Id === Id));
+  const { t } = useTranslation('global'); // Используем хук useTranslation для получения функции перевода
 
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
-  const typeNames = ['тонкое', 'традиционное'];
+  const typeNames = [t('DurumBlock.type1'), t('DurumBlock.type2')]; // Локализуем типы
   const addedCount = cartItem ? cartItem.count : 0;
   const onСlickAdd = () => {
     const item = {
@@ -66,8 +68,8 @@ function DurumBlock({ Id, title, price, imageUrl, sizes, types }) {
                 fill="white"
               />
             </svg>
-            <span>Добавить</span>
-            {addedCount > 0 &&<i>{addedCount}</i>}
+            <span>{t('DurumBlock.addButton')}</span> {/* Локализуем текст кнопки */}
+            {addedCount > 0 && <i>{addedCount}</i>}
           </button>
         </div>
       </div>

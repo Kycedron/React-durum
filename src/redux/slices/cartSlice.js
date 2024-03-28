@@ -42,13 +42,13 @@ const cartSlice = createSlice({
     },
     clearItems(state) {
       state.items = [];
-      state.totalPrice = 0; // Обновляем поле totalPrice
+      state.totalPrice = 0; 
     },
-  },
-  updateTotalPrice(state) {
-    state.totalPrice = state.items.reduce((sum, obj) => {
-      return obj.price * obj.count + sum;
-    }, 0);
+    updateTotalPrice(state) {
+      state.totalPrice = state.items.reduce((sum, obj) => {
+        return obj.price * obj.count + sum;
+      }, 0);
+    },
   },
 });
 

@@ -1,0 +1,77 @@
+{
+  "Header": {
+    "header_title": "Реакт durum",
+    "header_description": "Лучший durum во всей западной Анталии"
+  },
+  "Search": {
+    "placeholder": "Поиск дурума..."
+  },
+  "NotFoundBlock": {
+    "title": "Ничего не найдено :((",
+    "description": "К сожалению, данная страница не найдена в нашем интернет-магазине."
+  },
+  "DurumBlock": {
+    "type1": "тонкое",
+    "type2": "традиционное",
+    "addButton": "Добавить"
+  },
+    "sort": {
+      "title": "Сортировка",
+      "popularity_desc": "популярности(Desc)",
+      "popularity_asc": "популярности(ASC)",
+      "price_desc": "цене(Desc)",
+      "price_asc": "цене(ASC)",
+      "alphabet_desc": "алфaвиту(Desc)",
+      "alphabet_asc": "алфавиту(ASC)"
+    },
+    "Categories": {
+      "all": "Все",
+      "meat": "мясныe",
+      "vegetarian": "Вегетарианские",
+      "grill": "Гриль",
+      "spicy": "Острые",
+      "closed": "Закрытые"
+    },
+    "cartItem": {
+      "confirmDelete": "Ты действительно хочешь удалить товар?",
+      "itemAlt": "durum",
+      "sizeUnit": "см.",
+      "removeItem": "Удалить товар"
+    },
+    "cartEmpty": {
+      "title": "Корзина пустая",
+      "description": {
+        "first": "Вероятней всего, вы не заказывали дурум",
+        "second": "Для того, чтобы заказать дурум, перейди на главную страницу."
+      },
+      "imageAlt": "Empty cart",
+      "backButton": "Вернуться назад"
+    },
+    "cart": {
+      "title": "Корзина",
+      "confirmClear": "Ты действительно хочешь очистить корзину?",
+      "clearButton": "Очистить корзину",
+      "totalItems": "Всего дурумов ",
+      "totalPrice": "Сумма заказа  ₽",
+      "backButton": "Вернуться назад",
+      "payButton": "Оплатить сейчас"
+    },
+    "footer": {
+      "sections": {
+        "about": "О компании",
+        "information": "Информация",
+        "contacts": "Способы связи"
+      },
+      "links": {
+        "aboutCompany": "О компании",
+        "specialOffers": "Акции",
+        "wholesale": "Оптовые продажи",
+        "paymentMethods": "Способы оплаты",
+        "deliveryTerms": "Условия доставки"
+      },
+      "contact": {
+        "workTime": "Пн.- Вс. с 10:00 до 19:30 Без выходных"
+      }
+    }
+    
+}

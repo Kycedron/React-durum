@@ -1,36 +1,42 @@
 import React, { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSort } from '../redux/slices/filterSlice';
+import { useTranslation } from 'react-i18next';
+
+// Определение списка сортировок
 export const list = [
-  { name: 'популярности(Desc)', sortProperty: 'rating' },
-  { name: 'популярности(ASC)', sortProperty: '-rating' },
-  { name: 'цене(Desc)', sortProperty: 'price' },
-  { name: 'цене(ASC)', sortProperty: '-price' },
-  { name: 'алфaавиту(Desc)', sortProperty: 'title' },
-  { name: 'алфавиту(ASC)', sortProperty: '-title' },
+  { name: 'popularity_desc', sortProperty: 'rating' },
+  { name: 'popularity_asc', sortProperty: '-rating' },
+  { name: 'price_desc', sortProperty: 'price' },
+  { name: 'price_asc', sortProperty: '-price' },
+  { name: 'alphabet_desc', sortProperty: 'title' },
+  { name: 'alphabet_asc', sortProperty: '-title' },
 ];
 
 function Sort() {
   const dispatch = useDispatch();
   const sort = useSelector((state) => state.filter.sort);
-  const sortRef = React.useRef();
+  const sortRef = useRef();
   const [open, setOpen] = React.useState(false);
-  const OnclickListItem = (obj) => {
+  const { t, i18n } = useTranslation('global');
+
+  // Обработчик выбора сортировки
+  const onClickListItem = (obj) => {
     dispatch(setSort(obj));
     setOpen(false);
   };
 
+  // Обработчик клика вне элемента сортировки
   React.useEffect(() => {
-    const hadnleClickOutside = (event) => {
+    const handleClickOutside = (event) => {
       if (!event.composedPath().includes(sortRef.current)) {
         setOpen(false);
-        console.log('был клик ourtside');
       }
     };
 
-    document.body.addEventListener('click', hadnleClickOutside);
+    document.body.addEventListener('click', handleClickOutside);
 
-    return () => document.body.removeEventListener('click', hadnleClickOutside);
+    return () => document.body.removeEventListener('click', handleClickOutside);
   }, []);
 
   return (
@@ -48,8 +54,8 @@ function Sort() {
             fill="#2C2C2C"
           ></path>
         </svg>
-        <b>Сортировка по:</b>
-        <span onClick={() => setOpen(!open)}>{sort.name}</span>
+        <b>{t('sort.title')}</b>
+        <span onClick={() => setOpen(!open)}>{t(`sort.${sort.name}`)}</span> {/* Переводим текущую сортировку */}
       </div>
       {open && (
         <div className="sort__popup">
@@ -57,10 +63,10 @@ function Sort() {
             {list.map((obj, i) => (
               <li
                 key={i}
-                onClick={() => OnclickListItem(obj)}
+                onClick={() => onClickListItem(obj)}
                 className={sort.sortProperty === obj.sortProperty ? 'active' : ''}
               >
-                {obj.name}
+                {t(`sort.${obj.name}`)} 
               </li>
             ))}
           </ul>
