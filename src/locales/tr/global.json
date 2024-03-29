@@ -1,28 +1,28 @@
 {
   "Header": {
-    "header_title": "React durum",
-    "header_description": "Batı Antalya'daki en iyi durum"
+    "header_title": "Durum",
+    "header_description": "Batı Antalya'daki En İyi Durum"
   },
   "Search": {
-    "placeholder": "Durum arayın..."
+    "placeholder": "Durum Ara..."
   },
   "NotFoundBlock": {
-    "title": "Hiçbir şey bulunamadı :((",
-    "description": "Üzgünüz, bu sayfa internet mağazamızda bulunamadı."
+    "title": "Hiçbir Şey Bulunamadı :((",
+    "description": "Üzgünüz, Bu Sayfa İnternet Mağazamızda Bulunamadı."
   },
   "DurumBlock": {
-    "type1": "ince",
-    "type2": "geleneksel",
+    "type1": "İnce",
+    "type2": "Geleneksel",
     "addButton": "Ekle"
   },
   "sort": {
     "title": "Sırala",
-    "popularity_desc": "popülerlik(Azalan)",
-    "popularity_asc": "popülerlik(Artan)",
-    "price_desc": "fiyat(Azalan)",
-    "price_asc": "fiyat(Artan)",
-    "alphabet_desc": "alfabete(Genel A'dan Z'ye)",
-    "alphabet_asc": "alfabete(Genel Z'den A'ya)"
+    "popularity_desc": "Popülerlik (Azalan)",
+    "popularity_asc": "Popülerlik (Artan)",
+    "price_desc": "Fiyat (Azalan)",
+    "price_asc": "Fiyat (Artan)",
+    "alphabet_desc": "Alfabe Sıralaması (A'dan Z'ye)",
+    "alphabet_asc": "Alfabe Sıralaması (Z'den A'ya)"
   },
   "Categories": {
     "all": "Tümü",
@@ -30,28 +30,29 @@
     "vegetarian": "Vejetaryen",
     "grill": "Grill",
     "spicy": "Acılı",
-    "closed": "Kapalı"
+    "closed": "Kapalı",
+    "nigger balls": "Zenci Taşaklı"
   },
   "cartItem": {
-    "confirmDelete": "Gerçekten ürünü silmek istiyor musunuz?",
-    "itemAlt": "durum",
+    "confirmDelete": "Ürünü Silmek İstediğinizden Emin Misiniz?",
+    "itemAlt": "Durum",
     "sizeUnit": "cm.",
     "removeItem": "Ürünü Kaldır"
   },
   "cartEmpty": {
     "title": "Sepet Boş",
     "description": {
-      "first": "Muhtemelen durum siparişi vermediniz",
-      "second": "Durum siparişi vermek için ana sayfaya gidin."
+      "first": "Muhtemelen Durum Siparişi Vermediniz",
+      "second": "Durum Siparişi Vermek İçin Ana Sayfaya Gidin."
     },
-    "imageAlt": "Boş sepet",
+    "imageAlt": "Boş Sepet",
     "backButton": "Geri Dön"
   },
   "cart": {
     "title": "Sepet",
-    "confirmClear": "Sepeti temizlemek istediğinizden emin misiniz?",
+    "confirmClear": "Sepeti Temizlemek İstediğinizden Emin Misiniz?",
     "clearButton": "Sepeti Temizle",
-    "totalItems": "Toplam durum ",
+    "totalItems": "Toplam Durum",
     "totalPrice": "Toplam Tutar ₺",
     "backButton": "Geri Dön",
     "payButton": "Şimdi Öde"
