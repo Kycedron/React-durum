@@ -1,0 +1,76 @@
+{
+  "Header": {
+    "header_title": "React durum",
+    "header_description": "Batı Antalya'daki en iyi durum"
+  },
+  "Search": {
+    "placeholder": "Durum arayın..."
+  },
+  "NotFoundBlock": {
+    "title": "Hiçbir şey bulunamadı :((",
+    "description": "Üzgünüz, bu sayfa internet mağazamızda bulunamadı."
+  },
+  "DurumBlock": {
+    "type1": "ince",
+    "type2": "geleneksel",
+    "addButton": "Ekle"
+  },
+  "sort": {
+    "title": "Sırala",
+    "popularity_desc": "popülerlik(Azalan)",
+    "popularity_asc": "popülerlik(Artan)",
+    "price_desc": "fiyat(Azalan)",
+    "price_asc": "fiyat(Artan)",
+    "alphabet_desc": "alfabete(Genel A'dan Z'ye)",
+    "alphabet_asc": "alfabete(Genel Z'den A'ya)"
+  },
+  "Categories": {
+    "all": "Tümü",
+    "meat": "Etli",
+    "vegetarian": "Vejetaryen",
+    "grill": "Grill",
+    "spicy": "Acılı",
+    "closed": "Kapalı"
+  },
+  "cartItem": {
+    "confirmDelete": "Gerçekten ürünü silmek istiyor musunuz?",
+    "itemAlt": "durum",
+    "sizeUnit": "cm.",
+    "removeItem": "Ürünü Kaldır"
+  },
+  "cartEmpty": {
+    "title": "Sepet Boş",
+    "description": {
+      "first": "Muhtemelen durum siparişi vermediniz",
+      "second": "Durum siparişi vermek için ana sayfaya gidin."
+    },
+    "imageAlt": "Boş sepet",
+    "backButton": "Geri Dön"
+  },
+  "cart": {
+    "title": "Sepet",
+    "confirmClear": "Sepeti temizlemek istediğinizden emin misiniz?",
+    "clearButton": "Sepeti Temizle",
+    "totalItems": "Toplam durum ",
+    "totalPrice": "Toplam Tutar ₺",
+    "backButton": "Geri Dön",
+    "payButton": "Şimdi Öde"
+  },
+  "footer": {
+    "sections": {
+      "about": "Hakkımızda",
+      "information": "Bilgi",
+      "contacts": "İletişim"
+    },
+    "links": {
+      "aboutCompany": "Hakkımızda",
+      "specialOffers": "Özel Teklifler",
+      "wholesale": "Toptan Satış",
+      "paymentMethods": "Ödeme Yöntemleri",
+      "deliveryTerms": "Teslimat Koşulları"
+    },
+    "contact": {
+      "workTime": "Pazartesi-Pazar, 10:00 - 19:30, Tatillerde Açığız"
+    }
+  }
+}
