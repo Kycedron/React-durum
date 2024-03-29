@@ -8,10 +8,12 @@ import NotFound from './pages/NotFound';
 import './scss/app.scss';
 import global_eng from './locales/eng/global.json';
 import global_ru from './locales/ru/global.json';
+import global_tr from './locales/tr/global.json';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { I18nextProvider } from 'react-i18next';
 import ThemeSwitch from './Components/ThemeSwtich';
+import AuthForm from './Components/Authorisation';
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -22,6 +24,9 @@ i18next.init({
     },
     eng: {
       global: global_eng,
+    },
+    tr: {
+      global: global_tr,
     },
   },
 });
@@ -56,14 +61,16 @@ function App() {
           <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
               <button onClick={() => handleChangeLanguage('eng')}>ENG</button>
               <button onClick={() => handleChangeLanguage('ru')}>Rus</button>
+              <button onClick={() => handleChangeLanguage('tr')}>Tr</button>
             </div>
             <div className={`wrapper ${theme === 'dark' ? 'dark-mode' : 'light-mode'}`}>
               <Header />
               <div className="content">
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/cart" element={<Cart />} /> 
                   <Route path="*" element={<NotFound />} />
+                  <Route path="Authorisation" element={<AuthForm />} />
                 </Routes>
               </div>
             </div>

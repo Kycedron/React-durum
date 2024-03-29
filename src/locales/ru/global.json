@@ -60,7 +60,8 @@
       "sections": {
         "about": "О компании",
         "information": "Информация",
-        "contacts": "Способы связи"
+        "contacts": "Способы связи",
+        "workingHours":"Пн.- Вс. с 10:00 до 19:30 Без выходных"
       },
       "links": {
         "aboutCompany": "О компании",
