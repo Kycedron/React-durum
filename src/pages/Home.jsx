@@ -39,7 +39,7 @@ const Home = () => {
       const search = searchValue ? `search=${searchValue}` : '';
   
       try {
-        const res = await axios.get(`https://65c4eaa7dae2304e92e3a51e.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortby}&order=${order}&${search}`);
+        const res = await axios.get(`http://localhost:5000/items?page=${currentPage}&limit=4&${category}&sortBy=${sortby}&order=${order}&${search}`);
         setItems(res.data);
         setIsLoading(false);
       } catch (error) {
@@ -53,11 +53,12 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, [categoryId, sortType, searchValue, currentPage]);
   
+console.log(items)
+const objDurum = items.data;
+const durums = Array.isArray(objDurum) // Используем objDurum, а не items
+  ? objDurum.map((obj) => <DurumBlock key={obj._id} {...obj} />)
+  : null;
 
-
-  const durums = Array.isArray(items)
-    ? items.map((obj) => <DurumBlock key={obj.Id} {...obj} />)
-    : null;
 
   const skeletons = [...new Array(6)].map((index) => <Skeleton key={index} />);
 
